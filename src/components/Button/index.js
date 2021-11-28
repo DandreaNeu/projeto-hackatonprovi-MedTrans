@@ -1,8 +1,8 @@
 import { Container } from "./styles";
 
-const Button = ({ children, whiteSchema = false, ...rest }) => {
+const Button = ({ children, whiteSchema = false, onClick, ...rest }) => {
   return (
-    <Container whiteSchema={whiteSchema} {...rest}>
+    <Container whiteSchema={whiteSchema} onClick={onClick} {...rest}>
       {children}
     </Container>
   );
