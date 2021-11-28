@@ -6,7 +6,7 @@ export const Container = styled.button`
   font-size: 1.2rem;
   cursor: pointer;
   border-radius: 8px;
-  background-color: ${(props) => (props.whiteSchema ? "#FFF" : "#000")};
-  border: 2px solid ${(props) => (props.whiteSchema ? "#FFF" : "#000")};
-  color: ${(props) => (props.whiteSchema ? "#000" : "#FFF")};
+  background-color: ${(props) => (props.whiteSchema ? "#FFF" : "#005DDE")};
+  border: 2px solid ${(props) => (props.whiteSchema ? "#FFF" : "#005DDE")};
+  color: ${(props) => (props.whiteSchema ? "#005DDE" : "#FFF")};
 `;

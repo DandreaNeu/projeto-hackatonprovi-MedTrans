@@ -24,6 +24,17 @@ const GlobalStyle = createGlobalStyle`
     ul, li {
         list-style: none;
     }
+
+    :root {
+        --blue: #005DDE;
+        --blue-light: #D7E1F3;
+        --blue-dark: #1A254D;
+        --gray-light: #EBEDF2;
+        --gray: #A4A7B2;
+        --red: #F51A24;
+        --pink: #F7B4C4;
+        --white: #ffffff;
+    }
 `;
 
 export default GlobalStyle;
