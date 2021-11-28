@@ -1,3 +1,4 @@
+import Footer from "../../components/Footer";
 import FormRegister from "../../components/FormRegister";
 import { Container, Content, ImageHeader, DescriptionHeader } from "./styles";
 
@@ -26,6 +27,7 @@ const Register = () => {
         </Content>
         <FormRegister />
       </Container>
+      <Footer />
     </>
   );
 };

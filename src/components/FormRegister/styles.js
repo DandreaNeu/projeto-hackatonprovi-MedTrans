@@ -10,6 +10,10 @@ export const Form = styled.form`
   max-width: 550px;
   margin: 0 auto;
 
+  span {
+    color: #f00;
+  }
+
   .container-input {
     p {
       text-align: left;
