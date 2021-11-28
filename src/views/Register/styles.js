@@ -10,4 +10,19 @@ export const ImageHeader = styled.div`
   height: 180px;
 `;
 
-export const Content = styled.div``;
+export const Content = styled.div`
+  padding: 1.5rem;
+
+  h2 {
+    text-align: center;
+    color: #1a254d;
+  }
+
+  p {
+    font-size: 1.2rem;
+    text-align: center;
+    padding-top: 1.5rem;
+  }
+`;
+
+export const DescriptionHeader = styled.div``;
