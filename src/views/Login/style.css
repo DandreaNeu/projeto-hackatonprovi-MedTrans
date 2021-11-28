@@ -1,0 +1,67 @@
+@media (min-width: 640px) {
+  .container-login {
+    position: absolute;
+    max-height: 640px;
+    max-width: 360px;
+    background: #a4a7b3;
+    margin: 2rem;
+  }
+  .login-data {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 20.5rem;
+    height: 31.62rem;
+    background: white;
+    border-radius: 0.82rem;
+    margin: 1rem;
+  }
+  img {
+    margin: 2rem;
+  }
+  .input-login {
+    width: 12rem;
+    margin: 1rem;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.5);
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+  .input-login placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.82rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 17px;
+  }
+  .combo-checkbox {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.82rem;
+    line-height: 150%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .style-checkbox {
+    margin-right: 1rem;
+  }
+  .link a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+    text-decoration: underline;
+    color: #292929;
+    margin-bottom: 2rem;
+  }
+  .login-data button {
+    margin-top: 2rem;
+  }
+  footer {
+    color: white;
+  }
+}
