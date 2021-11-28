@@ -5,26 +5,27 @@ const Register = () => {
   return (
     <>
       <Container>
-        <ImageHeader />
         <Content>
+          <ImageHeader />
           <DescriptionHeader>
-            <h2>
-              É médico voluntário? <br /> Inscreva-se
-            </h2>
-            <p>
-              Que bom te ver por aqui! É muito importante seu apoio nesse
-              projeto.
-            </p>
-            <p>
-              Temos aqui um formulário simples para cadastro. No campo “fale
-              mais sobre você”, você pode escrever um pouco sobre suas
-              especialidades e experiências.
-            </p>
+            <div>
+              <h2>
+                É médico? <br /> Inscreva-se
+              </h2>
+              <p>
+                Que bom te ver por aqui! É muito importante seu apoio nesse
+                projeto.
+              </p>
+              <p>
+                Temos aqui um formulário simples para cadastro. No campo “fale
+                mais sobre você”, você pode escrever um pouco sobre suas
+                especialidades e experiências.
+              </p>
+            </div>
           </DescriptionHeader>
-          <FormRegister />
         </Content>
+        <FormRegister />
       </Container>
-      <form></form>
     </>
   );
 };
