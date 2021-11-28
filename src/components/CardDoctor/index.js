@@ -47,7 +47,9 @@ const CardDoctor = () => {
         </a>
       </div>
       <div className="container-button">
-        <Button onClick={handleClick}>Entrar em contato</Button>
+        <Button whiteSchema onClick={handleClick}>
+          Entrar em contato
+        </Button>
       </div>
     </Container>
   );

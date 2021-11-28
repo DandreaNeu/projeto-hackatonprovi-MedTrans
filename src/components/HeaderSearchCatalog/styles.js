@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
+  /*background: url(${(props) =>
+    props.whiteSchema ? "image-Kelvin" : "iamge-dandrea"});*/
   background-color: var(--blue);
   height: 85vh;
   padding: 0 1.5rem;

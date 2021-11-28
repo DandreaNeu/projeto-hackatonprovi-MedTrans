@@ -3,12 +3,12 @@ import { FiSearch } from "react-icons/fi";
 import { HiOutlineChevronDoubleDown } from "react-icons/hi";
 import { useState } from "react";
 
-const HeaderSearchCatalog = () => {
+const HeaderSearchCatalog = ({ whiteSchema, children }) => {
   const [inputValueSpecialist, setInputValueSpecialist] = useState("");
 
   return (
     <>
-      <Container>
+      <Container whiteSchema>
         <Logo>
           <figure>
             <img alt="logo medtrans"></img>
@@ -16,13 +16,7 @@ const HeaderSearchCatalog = () => {
           </figure>
         </Logo>
         <Content>
-          <h2 className="Content-text">
-            Especialistas <br /> MedTrans
-          </h2>
-          <p className="Content-text">
-            Aqui você tem um catálogo de médicos prontos para atender o público
-            trans e travestis.
-          </p>
+          {children}
           <div>
             <input
               placeholder="Encontre um especialista"
