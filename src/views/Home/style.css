@@ -1,0 +1,96 @@
+.container-telaInicial {
+  padding: 0.5rem;
+}
+.medicos {
+  background: #f7b4c4;
+}
+
+.titulo h3 {
+  text-align: center;
+  font-family: ' Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.12rem;
+  line-height: 150%;
+  color: #005dde;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+.conteudo-texto p {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 150%;
+  color: #232429;
+  margin: 2rem;
+}
+
+.button button {
+  border: 1px solid #005dde;
+}
+@media (min-width: 420px) {
+  .button button {
+    width: 18.5rem;
+    height: 3.5rem;
+    margin: 2rem;
+    margin-left: 40%;
+  }
+}
+@media (max-width: 420px) {
+  .button button {
+    width: 16.5rem;
+    height: 3.5rem;
+    margin: 1.5rem;
+  }
+}
+.img-depoimento {
+  margin: 3rem;
+}
+.depoimento p {
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 150%;
+  color: #232429;
+}
+.mulher-trans p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 150%;
+  color: #005dde;
+}
+.lista-medicos {
+  background: #d7e1f3;
+}
+.divider {
+  border: 1px solid #2d3137;
+  margin-bottom: 1rem;
+}
+.redes-sociais {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.redes-sociais p {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 150%;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 1rem;
+}
+.icons {
+  display: flex;
+  justify-content: space-evenly;
+}
