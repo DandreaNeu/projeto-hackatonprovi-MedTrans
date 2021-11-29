@@ -6,6 +6,8 @@ export const Container = styled.li`
   padding: 1rem;
   background-color: #ebedf2;
   margin: 1rem;
+  width: 100%;
+  max-width: 450px;
 
   .container-button {
     text-align: center;

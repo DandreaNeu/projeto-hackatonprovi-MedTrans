@@ -26,7 +26,6 @@ const HeaderSearchCatalog = ({ whiteSchema, children }) => {
             <button disabled={!inputValueSpecialist}>
               <FiSearch />
             </button>
-            {/*<button>Procurar</button>*/}
           </div>
         </Content>
         <HiOutlineChevronDoubleDown className="icon-scroll_down" />

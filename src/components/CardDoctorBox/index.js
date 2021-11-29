@@ -1,11 +1,15 @@
 import { Container } from "./styles";
 import CardDoctor from "../CardDoctor";
+import { UserContext } from "../../provider/user";
+import { useContext } from "react";
 
 const CardDoctorBox = () => {
+  const { listDoctors } = useContext(UserContext);
+
   return (
     <Container>
-      {[1, 2, 3, 4, 5, 6].map((item) => (
-        <CardDoctor />
+      {listDoctors.map((doctor) => (
+        <CardDoctor doctor={doctor} />
       ))}
     </Container>
   );
