@@ -51,6 +51,16 @@ export const Form = styled.form`
     }
   }
 
+  .container-input_select {
+    width: 100%;
+    height: 50px;
+    font-weight: bold;
+    padding-left: 1rem;
+    border-radius: 8px;
+    background-color: #d7e1f3;
+    color: var(--blue);
+  }
+
   .container-button {
     text-align: center;
   }

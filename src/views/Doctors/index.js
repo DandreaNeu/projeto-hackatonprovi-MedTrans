@@ -2,7 +2,16 @@ import CardDoctorBox from "../../components/CardDoctorBox";
 import HeaderSearchCatalog from "../../components/HeaderSearchCatalog";
 import Footer from "../../components/Footer";
 import { AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
-const Doctor = () => {
+import { useEffect, useContext } from "react";
+import { UserContext } from "../../provider/user";
+
+const Doctors = () => {
+  const { getDoctors } = useContext(UserContext);
+
+  useEffect(() => {
+    getDoctors();
+  }, []);
+
   return (
     <>
       <HeaderSearchCatalog whiteSchema>
@@ -26,4 +35,4 @@ const Doctor = () => {
   );
 };
 
-export default Doctor;
+export default Doctors;

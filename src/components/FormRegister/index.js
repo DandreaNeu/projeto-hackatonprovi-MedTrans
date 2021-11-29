@@ -5,13 +5,14 @@ import { useState } from "react";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
+import { useContext } from "react";
+import { UserContext } from "../../provider/user";
 
 const FormRegister = () => {
-  const [inputRadioValue, setInputSelectValue] = useState("não");
+  const [inputRadioValue, setInputRadioValue] = useState("sim");
+  const [inputSelectValue, setInputSelectValue] = useState("Clinico Geral");
 
-  const handleChange = (e) => {
-    setInputSelectValue(e.target.value);
-  };
+  const { registerUser } = useContext(UserContext);
 
   const schema = yup.object().shape({
     email: yup.string().required("Campo obrigatório").email("Email inválido"),
@@ -19,7 +20,7 @@ const FormRegister = () => {
       .string()
       .required("Campo obrigatório")
       .min(6, "Mínimo 6 dígitos"),
-    terms_and_conditions: yup
+    aceite: yup
       .boolean()
       .oneOf([true], "Necessário aceitar termos e condições"),
     name: yup.string().required("Campo obrigatório"),
@@ -27,8 +28,12 @@ const FormRegister = () => {
     specialty: yup.string().required("Campo obrigatório"),
     crm: yup.string().required("Campo obrigatório").max(6, "Máximo 6 dígitos"),
     address: yup.string().required("Campo obrigatório"),
-    whatsapp: yup.string().required("Campo obrigatório"),
+    phone: yup.string().required("Campo obrigatório"),
   });
+
+  const handleChange = (e) => {
+    setInputRadioValue(e.target.value);
+  };
 
   const {
     register,
@@ -37,6 +42,8 @@ const FormRegister = () => {
   } = useForm({ resolver: yupResolver(schema) });
 
   const submitFunction = (data) => {
+    data["pcd"] = !!data["pcd"];
+    registerUser(data);
     console.log(data);
   };
 
@@ -61,12 +68,10 @@ const FormRegister = () => {
           />
           {!!errors.password && <span>{errors.password.message}</span>}
           <div className="container-checkboxInput">
-            <input type="checkbox" {...register("terms_and_conditions")} />
+            <input type="checkbox" {...register("aceite")} />
             <label>Aceitar termos e condições</label>
           </div>
-          {!!errors.terms_and_conditions && (
-            <span>{errors.terms_and_conditions.message}</span>
-          )}
+          {!!errors.aceite && <span>{errors.aceite.message}</span>}
           <Input
             placeholder="Digite seu nome"
             type="text"
@@ -83,14 +88,20 @@ const FormRegister = () => {
             label="Sobrenome"
           />
           {!!errors.last_name && <span>{errors.last_name.message}</span>}
-          <Input
-            placeholder="Digite as suas especialidades"
-            type="text"
-            register={register}
-            name="specialty"
-            label="Especialidades"
-          />
-          {!!errors.specialty && <span>{errors.specialty.message}</span>}
+          <select
+            value={inputSelectValue}
+            {...register("specialty")}
+            onChange={(e) => setInputSelectValue(e.target.value)}
+            className="container-input_select"
+          >
+            <option value="Ginecologista">Ginecologista</option>
+            <option value="Cardiologista">Cardiologista</option>
+            <option value="Cirurgião Plastico">Cirurgião Plastico</option>
+            <option value="Endocrinologista">Endocrinologista</option>
+            <option value="Psicologia">Psicologia</option>
+            <option value="Urologia">Urologia</option>
+            <option value="Clinico Geral">Clinico Geral</option>
+          </select>
           <Input
             placeholder="Digite seu CRM"
             type="number"
@@ -113,8 +124,8 @@ const FormRegister = () => {
               <label htmlFor="sim">sim</label>
               <input
                 type="radio"
-                value="sim"
-                {...register("acessibility")}
+                value={"sim"}
+                {...register("pcd")}
                 checked={inputRadioValue === "sim"}
                 defaultChecked
                 onChange={(e) => handleChange(e)}
@@ -124,9 +135,9 @@ const FormRegister = () => {
               <label htmlFor="não">não</label>
               <input
                 type="radio"
-                value="não"
-                {...register("acessibility")}
-                checked={inputRadioValue === "não"}
+                value={""}
+                {...register("pcd")}
+                checked={inputRadioValue === ""}
                 onChange={(e) => handleChange(e)}
               />
             </div>
@@ -134,14 +145,18 @@ const FormRegister = () => {
           <div className="container-input">
             <p>Quais as modalidades que você atende?</p>
             <div className="container-checkboxInput">
-              <input type="checkbox" label="online" {...register("online")} />
+              <input
+                type="checkbox"
+                label="atendimento_online"
+                {...register("atendimento_online")}
+              />
               <label>Online</label>
             </div>
             <div className="container-checkboxInput">
               <input
                 type="checkbox"
-                label="online"
-                {...register("presential")}
+                label="atendimento_presencial"
+                {...register("atendimento_presencial")}
               />
               <label>Presencial</label>
             </div>
@@ -150,8 +165,8 @@ const FormRegister = () => {
             placeholder="Digite o número de seu WhatsApp"
             type="text"
             register={register}
-            name="whatsapp"
-            label="WhatsApp"
+            name="phone"
+            label="phone"
           />
           {!!errors.whatsapp && <span>{errors.whatsapp.message}</span>}
           <Input
@@ -168,7 +183,10 @@ const FormRegister = () => {
             name="site"
             label="Site"
           />
-          <textarea placeholder="Fale mais sobre você" />
+          <textarea
+            placeholder="Fale mais sobre você"
+            {...register("descript")}
+          />
           <div className="container-button">
             <Button type="submit">Cadastrar</Button>
           </div>

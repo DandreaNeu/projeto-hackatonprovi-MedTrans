@@ -3,11 +3,7 @@ import { AiFillInstagram } from "react-icons/ai";
 import AvatarMedicoMobile from "../../assets/avatarMedicoMobile.svg";
 import Button from "../Button";
 
-const CardDoctor = () => {
-  const handleClick = () => {
-    console.log("olá");
-  };
-
+const CardDoctor = ({ doctor }) => {
   return (
     <Container>
       <div className="header-info">
@@ -19,37 +15,35 @@ const CardDoctor = () => {
           <figcaption></figcaption>
         </figure>
         <div>
-          <h3>Dr. Hans Crcrutis</h3>
-          <p>CRM: 123456</p>
+          <h3>Dr. {doctor.name}</h3>
+          <p>CRM: {doctor.crm}</p>
         </div>
       </div>
       <div className="content">
         <p>
           <span>Especialidades:</span>
           <br />
-          Aqui vai as especialidades
+          {doctor.specialty}
         </p>
         <p>
           <span>Endereço:</span>
           <br />
-          Aqui vai o endereço
+          {doctor.address}
         </p>
         <p>
-          <span>Sobre o Dr. Hans Chucrutis:</span>
+          <span>Sobre o (a) Dr(a). {doctor.name}:</span>
           <br />
-          Aqui vai o texto "fale sobre você"
+          {doctor.descript}
         </p>
       </div>
       <div className="footer">
         <a href="https://www.instagram.com/keelvin_jw/">
           <AiFillInstagram />
-          <p>@perfildoinsta</p>
+          <p>@{doctor.name}</p>
         </a>
       </div>
       <div className="container-button">
-        <Button whiteSchema onClick={handleClick}>
-          Entrar em contato
-        </Button>
+        <Button whiteSchema>Entrar em contato</Button>
       </div>
     </Container>
   );
