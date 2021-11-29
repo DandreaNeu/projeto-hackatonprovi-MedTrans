@@ -1,134 +1,96 @@
-@media (min-width: 640px) {
-  .container-telaInicial {
-    max-width: 360px;
-    padding: 0.5rem;
-    margin: 1rem;
-  }
-  .boas-vindas {
-    text-align: center;
-    background: #a4a7b3;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .boas-vindas h1 {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1.5rem;
-    line-height: 120%;
-    margin-bottom: 3rem;
-    color: white;
-    width: 18.5rem;
-    height: 3.5rem;
-  }
-  .boas-vindas h2 {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.12rem;
-    line-height: 150%;
-    margin-bottom: 3rem;
-    width: 18.5rem;
-    height: 3.5rem;
-    color: #00003f;
-  }
-  .search {
-    all: unset;
-  }
-  .expand {
-    background: #a4a7b3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-bottom: 2rem;
-  }
-  .pesquisa {
-    width: 15rem;
-    height: 3.5rem;
-    border-radius: 1rem;
-    padding: 1rem;
-    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.5);
-  }
-  .expand img {
-    margin-bottom: 2rem;
-  }
+.container-telaInicial {
+  padding: 0.5rem;
+}
+.medicos {
+  background: #f7b4c4;
+}
 
-  .titulo h3 {
-    text-align: center;
-    font-family: ' Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 1.12rem;
-    line-height: 150%;
-    color: #1a254d;
-    margin-top: 2rem;
-    padding: 2rem;
-  }
-  .conteudo-texto p {
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1rem;
-    line-height: 150%;
-    color: #232429;
-    margin: 2rem;
-  }
+.titulo h3 {
+  text-align: center;
+  font-family: ' Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.12rem;
+  line-height: 150%;
+  color: #005dde;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+.conteudo-texto p {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 150%;
+  color: #232429;
+  margin: 2rem;
+}
+
+.button button {
+  border: 1px solid #005dde;
+}
+@media (min-width: 420px) {
   .button button {
     width: 18.5rem;
     height: 3.5rem;
     margin: 2rem;
+    margin-left: 40%;
   }
-  .depoimentos img {
-    padding: 2rem;
+}
+@media (max-width: 420px) {
+  .button button {
+    width: 16.5rem;
+    height: 3.5rem;
+    margin: 1.5rem;
   }
-  .depoimento p {
-    font-family: 'Roboto', sans-serif;
-    font-style: italic;
-    font-weight: normal;
-    font-size: 1rem;
-    line-height: 150%;
-    color: #232429;
-  }
-  .mulher-trans p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 0.87rem;
-    line-height: 150%;
-    color: #232429;
-  }
-  .divider {
-    border: 1px solid #232429;
-    margin: 2rem;
-  }
-  .redes-sociais {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-bottom: 3rem;
-  }
+}
+.img-depoimento {
+  margin: 3rem;
+}
+.depoimento p {
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 150%;
+  color: #232429;
+}
+.mulher-trans p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 150%;
+  color: #005dde;
+}
+.lista-medicos {
+  background: #d7e1f3;
+}
+.divider {
+  border: 1px solid #2d3137;
+  margin-bottom: 1rem;
+}
+.redes-sociais {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
 
-  .redes-sociais p {
-    font-family: 'Merriweather', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 150%;
-    color: rgba(0, 0, 0, 0.8);
-    margin-bottom: 1rem;
-  }
-  .icons {
-    display: flex;
-    justify-content: space-evenly;
-  }
+.redes-sociais p {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 150%;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 1rem;
+}
+.icons {
+  display: flex;
+  justify-content: space-evenly;
 }
